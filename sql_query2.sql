@@ -1,0 +1,14 @@
+use ab_company;
+select emp_name,salary from employes;
+select*from employes where department ='it';
+select*from employes where salary>50000;
+select*from employes where city ='delhi';
+select*from employes order by salary desc;
+select*from employes order by salary desc limit 3;
+select*from employes order by salary desc limit 1;
+select max(salary)from employes;
+select min(salary)from employes;
+select avg(salary)from employes;
+select count(emp_id)from employes;
+select department,count(emp_id)from employes group by department order by count(emp_id);
+select distinct department from employes;
