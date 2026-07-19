@@ -1,0 +1,16 @@
+use ab_company;
+select*from employes;
+select*from employes where joining_date>'2021-1-1';
+select*from employes where joining_date<'2021-1-1';
+select*from employes where city='delhi' and department='it';
+select*from employes where city in ('mumbai','pune');
+select*from employes where salary between 45000 and 60000 order by salary desc;
+select*from employes where emp_name like 'a%';
+select*from employes where emp_name like '%h%';
+select*from employes where department not in ('it');
+select*from employes where city not in('delhi');
+select*from employes order by joining_date desc;
+select sum(salary)from employes;
+select department,avg(salary)from employes group by department;
+select department,max(salary)from employes group by department order by max(salary)desc;
+select department,min(salary)from employes group by department order by min(salary)desc;
