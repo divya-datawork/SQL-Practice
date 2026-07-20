@@ -1,0 +1,14 @@
+use ab_company;
+select*from employes;
+select 'department',count('emp_name')from employes group by 'department' having count('emp_name')>2;
+select city,count(emp_id) from employes group by city having count(emp_id)<3;
+set sql_safe_updates=0;
+update employes set salary=salary+5000 where department='hr';
+select*from employes;
+update employes set salary=45000 where emp_id=105;
+select*from employes;
+update employes set city='delhi' where emp_id=107;
+delete from employes where emp_id=105;
+delete from employes where department='marketing';
+insert into employes values(108,"sambhu","marketing",40000,"jaipur","2023-2-19");
+select*from employes;
